@@ -1,0 +1,33 @@
+{
+  "name": "yandex-dialogs-sdk-state-file-middleware",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src",
+    "test": "jest",
+    "dev": "tsc -w --declaration",
+    "build": "rm -rf dist && tsc --declaration; cp -r ./src/types ./dist/types",
+    "version": "npm run changelog && git add CHANGELOG.md",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "release": "conventional-github-releaser -p angular",
+    "deploy": "tsc && git push --follow-tags origin master && npm publish"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lowdb": "^1.0.0",
+    "yandex-dialogs-sdk": "^1.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "^10.5.1",
+    "conventional-changelog-cli": "^2.0.0",
+    "conventional-github-releaser": "^3.1.0",
+    "jest": "^23.2.0",
+    "prettier": "^1.13.7",
+    "ts-jest": "^23.0.0",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.2",
+    "typescript-eslint-parser": "^16.0.1"
+  }
+}
