@@ -13,7 +13,7 @@
     "release": "conventional-github-releaser -p angular",
     "deploy": "tsc && git push --follow-tags origin master && npm publish"
   },
-  "author": "",
+  "author": "Phil Romanov @fletcherist",
   "license": "ISC",
   "dependencies": {
     "lowdb": "^1.0.0",
