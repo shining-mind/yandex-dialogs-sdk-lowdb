@@ -1,5 +1,6 @@
 # yandex-dialogs-sdk-lowdb
-Makes your session persistent by saving it into a json file
+Makes your session persistent by saving it into a json file.
+This middleware uses **[lowdb](https://github.com/typicode/lowdb)** database
 
 # Usage
 
