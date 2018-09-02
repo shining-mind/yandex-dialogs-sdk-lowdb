@@ -1,6 +1,6 @@
 {
   "name": "yandex-dialogs-sdk-state-file-middleware",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,9 +16,13 @@
   "author": "Phil Romanov @fletcherist",
   "license": "ISC",
   "dependencies": {
+    "@types/lowdb": "^1.0.5",
     "lowdb": "^1.0.0",
-    "yandex-dialogs-sdk": "^1.5.1"
+    "yandex-dialogs-sdk": "^2.0.2"
   },
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@types/node": "^10.5.1",
     "conventional-changelog-cli": "^2.0.0",
