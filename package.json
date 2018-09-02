@@ -1,5 +1,5 @@
 {
-  "name": "yandex-dialogs-sdk-state-file-middleware",
+  "name": "yandex-dialogs-sdk-lowdb",
   "version": "1.0.2",
   "description": "",
   "main": "index.js",
@@ -14,7 +14,7 @@
     "deploy": "tsc && git push --follow-tags origin master && npm publish"
   },
   "author": "Phil Romanov @fletcherist",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@types/lowdb": "^1.0.5",
     "lowdb": "^1.0.0",
