@@ -1,3 +1,6 @@
+# yandex-dialogs-sdk-lowdb
+Makes your session persistent by saving it into a json file
+
 # Usage
 
 ```js
