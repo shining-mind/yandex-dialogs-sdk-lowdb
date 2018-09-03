@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fletcherist/yandex-dialogs-sdk.git"
+    "url": "git+https://github.com/fletcherist/yandex-dialogs-sdk-lowdb.git"
   },
   "bugs": {
-    "url": "https://github.com/fletcherist/yandex-dialogs-sdk/issues"
+    "url": "https://github.com/fletcherist/yandex-dialogs-sdk-lowdb/issues"
   },
-  "homepage": "https://github.com/fletcherist/yandex-dialogs-sdk#readme",
+  "homepage": "https://github.com/fletcherist/yandex-dialogs-sdk-lowdb#readme",
   "author": "Phil Romanov @fletcherist",
   "license": "MIT",
   "dependencies": {
