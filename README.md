@@ -1,6 +1,12 @@
 # yandex-dialogs-sdk-lowdb
+[![npm version](https://badge.fury.io/js/yandex-dialogs-sdk-lowdb.svg)](https://badge.fury.io/js/yandex-dialogs-sdk-lowdb)
 Makes your session persistent by saving it into a json file.
 This middleware uses **[lowdb](https://github.com/typicode/lowdb)** database
+
+# Installation
+
+`npm i yandex-dialogs-sdk-lowdb --save`    
+`yarn add yandex-dialogs-sdk-lowdb`
 
 # Usage
 
