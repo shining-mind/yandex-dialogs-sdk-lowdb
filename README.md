@@ -5,6 +5,8 @@
 Makes your session persistent by saving it into a json file.
 This middleware uses **[lowdb](https://github.com/typicode/lowdb)** database
 
+Middleware for [yandex-dialogs-sdk](https://github.com/fletcherist/yandex-dialogs-sdk)
+
 # Installation
 
 `npm i yandex-dialogs-sdk-lowdb --save`    
