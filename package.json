@@ -1,8 +1,8 @@
 {
   "name": "yandex-dialogs-sdk-lowdb",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "lint": "eslint src",
     "test": "jest",
