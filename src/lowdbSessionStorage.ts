@@ -4,7 +4,7 @@ import low, { AdapterSync, LowdbSync } from 'lowdb';
 import { LowDBSession } from './lowdbSession';
 
 export class LowDBSessionStorage implements ISessionStorage {
-  private db: LowdbSync<AdapterSync>;
+  public db: LowdbSync<AdapterSync>;
   constructor(filePath: string) {
     const adapter = new FileSync(filePath);
     this.db = low(adapter);

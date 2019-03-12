@@ -16,12 +16,19 @@ Middleware for [yandex-dialogs-sdk](https://github.com/fletcherist/yandex-dialog
 
 ```js
 const { Alice } = require('yandex-dialogs-sdk');
-const lowDBSession = require('yandex-dialogs-sdk-lowdb');
+const { createMiddleware, createStorage } = require('yandex-dialogs-sdk-lowdb');
 
 const alice = new Alice();
+
+
 // Now user session becomes persistent
 // Sync with file databse.json
-alice.use(lowDBSession.middleware('database.json'));
+
+// use `storage.db` to access "LowdbSync<AdapterSync>"
+// these methods https://github.com/typicode/lowdb#examples
+// outside of sdk
+const storage = createStorage('database.json')
+alice.use(createMiddleware(storage));
 
 alice.any(ctx => {
     const counter = ctx.session.get('counter') || 0;
