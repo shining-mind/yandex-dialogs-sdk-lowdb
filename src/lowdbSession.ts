@@ -12,6 +12,7 @@ export class LowDBSession implements Session {
 
   constructor(sessionAdapter: LowdbObject) {
     this._sessionAdapter = sessionAdapter;
+    this.id = 'lowdb'
   }
 
   public has(key: string): boolean {
