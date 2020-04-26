@@ -11,12 +11,12 @@ export class LowDBSessionStorage implements SessionStorage {
   }
   public async getOrCreate(id: string): Promise<Session> {
     const sessions = this.db.get('sessions');
-    if (!sessions.values()) {
+    if (!sessions.value()) {
       this.db.defaults({ sessions: [] }).write();
     }
-    const sessionData = this.db.get('sessions').find({ id });
+    const sessionData = (this.db.get('sessions') as any).find({ id });
     if (!sessionData.values()) {
-      sessions.push({ id, session: {} }).write();
+      (sessions as any).push({ id, session: {} }).write();
     }
 
     const session = new LowDBSession(sessionData);

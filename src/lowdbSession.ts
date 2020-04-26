@@ -1,5 +1,4 @@
 import { Session } from 'yandex-dialogs-sdk';
-import { AdapterSync, LowdbSync } from 'lowdb';
 
 interface LowdbObject {
   get(key: string): any;
