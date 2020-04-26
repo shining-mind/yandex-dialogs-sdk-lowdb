@@ -1,16 +1,16 @@
-import { ISession } from 'yandex-dialogs-sdk';
+import { Session } from 'yandex-dialogs-sdk';
 import { AdapterSync, LowdbSync } from 'lowdb';
 
-interface ILowdbObject {
+interface LowdbObject {
   get(key: string): any;
   unset(key: string): any;
   set(key: string, value: any): any;
 }
-export class LowDBSession implements ISession {
+export class LowDBSession implements Session {
   public readonly id: string;
-  private readonly _sessionAdapter: ILowdbObject;
+  private readonly _sessionAdapter: LowdbObject;
 
-  constructor(sessionAdapter: ILowdbObject) {
+  constructor(sessionAdapter: LowdbObject) {
     this._sessionAdapter = sessionAdapter;
   }
 
@@ -19,7 +19,7 @@ export class LowDBSession implements ISession {
   }
 
   public delete(key: string): void {
-    this._sessionAdapter.unset(key).write();
+    this._sessionAdapter.unset(`session.${key}`).write();
   }
 
   public get<TValue>(key: string): TValue {

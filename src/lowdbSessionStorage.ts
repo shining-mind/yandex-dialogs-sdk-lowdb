@@ -1,15 +1,15 @@
 import FileSync from 'lowdb/adapters/FileSync';
-import { ISessionStorage, ISession } from 'yandex-dialogs-sdk';
+import { SessionStorage, Session } from 'yandex-dialogs-sdk';
 import low, { AdapterSync, LowdbSync } from 'lowdb';
 import { LowDBSession } from './lowdbSession';
 
-export class LowDBSessionStorage implements ISessionStorage {
+export class LowDBSessionStorage implements SessionStorage {
   public db: LowdbSync<AdapterSync>;
   constructor(filePath: string) {
     const adapter = new FileSync(filePath);
     this.db = low(adapter);
   }
-  public async getOrCreate(id: string): Promise<ISession> {
+  public async getOrCreate(id: string): Promise<Session> {
     const sessions = this.db.get('sessions');
     if (!sessions.value()) {
       this.db.defaults({ sessions: [] }).write();
