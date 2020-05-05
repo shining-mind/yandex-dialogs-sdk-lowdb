@@ -19,7 +19,7 @@ export class LowDBSession implements ISession {
   }
 
   public delete(key: string): void {
-    this._sessionAdapter.unset(key).write();
+    this._sessionAdapter.unset(`session.${key}`).write();
   }
 
   public get<TValue>(key: string): TValue {
