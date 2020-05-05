@@ -1,13 +1,13 @@
 {
   "name": "yandex-dialogs-sdk-lowdb",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
     "lint": "eslint src",
     "test": "jest",
     "dev": "tsc -w --declaration",
-    "build": "rm -rf dist && tsc",
+    "build": "shx rm -rf dist && tsc --declaration",
     "version": "npm run changelog && git add CHANGELOG.md",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "release": "conventional-github-releaser -p angular",
@@ -24,22 +24,23 @@
   "author": "Phil Romanov @fletcherist",
   "license": "MIT",
   "dependencies": {
-    "@types/lowdb": "^1.0.5",
-    "lowdb": "^1.0.0",
-    "yandex-dialogs-sdk": "^2.0.2"
+    "lowdb": "1.0.0",
+    "yandex-dialogs-sdk": "^2.3.0"
   },
   "files": [
     "dist"
   ],
   "devDependencies": {
+    "@types/lowdb": "1.0.9",
     "@types/node": "^10.5.1",
     "conventional-changelog-cli": "^2.0.0",
     "conventional-github-releaser": "^3.1.0",
     "jest": "^23.2.0",
     "prettier": "^1.13.7",
+    "shx": "^0.3.2",
     "ts-jest": "^23.0.0",
     "tslint": "^5.10.0",
-    "typescript": "^2.9.2",
+    "typescript": "3.8.3",
     "typescript-eslint-parser": "^16.0.1"
   }
 }
