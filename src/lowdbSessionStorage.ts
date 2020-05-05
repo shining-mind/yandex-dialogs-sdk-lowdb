@@ -11,7 +11,7 @@ interface Schema {
 }
 
 export class LowDBSessionStorage implements ISessionStorage {
-  public db: LowdbSync<Schema>;
+  private db: LowdbSync<Schema>;
   constructor(filePath: string) {
     const adapter = new FileSync<Schema>(filePath);
     this.db = low(adapter);
